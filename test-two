@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visually hidden link content on mobile screen readers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+<h1>List tagging and screen reader interactions test</h1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Test 1: Auto-tagged list</h2>
+
+<p class=MsoNormal>List was created using the text tool in Acrobat, then tagged
+with the <span class=SpellE>autotag</span> feature in Acrobat.</p>
+
+<h3>NVDA + Acrobat</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list body
+text, skipping the first item.<o:p></o:p></p>
+
+<h3>NVDA + Firefox</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list body
+text, skipping the first item.</p>
+
+<h3>NVDA + Chrome</h3>
+
+<p class=MsoNormal>List content announced as plain text. Text was not
+identified as a list, and list shortcuts returned “No next list”.</p>
+
+<h3>JAWS + Acrobat</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through bullets
+(tagged as label). Arrow key navigation required to access list body.</p>
+
+<h3>JAWS + Firefox</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list
+items, focusing bullet and text at the same time. List items are announced as “Bullet
+[body text] graphic”.</p>
+
+<h3>JAWS + Chrome</h3>
+
+<p class=MsoNormal>Did not announce list. On L/I shortcuts, announces no lists
+or list items.</p>
+
+<p class=MsoNormal>List items (including bullet and text) can be focused with
+arrow keys and are announced as “Bullet [body text]”.<o:p></o:p></p>
+
+<h2>Test 2: Auto-tagged list with manually deleted and replaced list item </h2>
+
+<p class=MsoNormal>Deleted a single list item <span class=GramE>tag, and</span>
+recreated the tag structure using “Create tag from content” and “New tag”.</p>
+
+<h3>NVDA + Acrobat</h3>
+
+<p class=MsoNormal>The recreated list item was ignored by NVDA. The list was
+announced as 3 items rather than 4.</p>
+
+<h3>NVDA + Firefox</h3>
+
+<p class=MsoNormal>Announced as list with 4 items. List navigation and
+shortcuts functioned as expected.</p>
+
+<h3>NVDA + Chrome<o:p></o:p></h3>
+
+<p class=MsoNormal>List content announced as plain text. Text was not
+identified as a list, and list shortcuts returned “No next list”.</p>
+
+<h3>JAWS + Acrobat</h3>
+
+<p class=MsoNormal>Announced list with 3 items. On “I” moves through first two
+bullets, then to the text “Chocolate”, then loops to the top of the list.</p>
+
+<h3>JAWS + Firefox</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list
+items, focusing bullet and text at the same time. List items are announced as “Bullet
+[body text] graphic”.<o:p></o:p></p>
+
+<h3>JAWS + Chrome</h3>
+
+<p class=MsoNormal>Did not announce list. On L/I shortcuts, announces no lists
+or list items.<o:p></o:p></p>
+
+<p class=MsoNormal>List items (including bullet and text) can be focused with
+arrow keys and are announced as “Bullet [body text]”.<o:p></o:p></p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<h2>Test 3: Fully remade list markup</h2>
+
+<p class=MsoNormal>Deleted tag tree and recreated all tags from scratch using new
+tag and tag content from selection tools.</p>
+
+<h3>NVDA + Acrobat</h3>
+
+<p class=MsoNormal>List announced including number of items. List navigation
+and shortcuts functioned as expected.</p>
+
+<h3>NVDA + Firefox</h3>
+
+<p class=MsoNormal>List announced including number of items. List navigation
+and shortcuts functioned as expected.<o:p></o:p></p>
+
+<h3>NVDA + Chrome</h3>
+
+<p class=MsoNormal>List content announced as plain text. Text was not
+identified as a list, and list shortcuts returned “No next list”.</p>
+
+<h3>JAWS + Acrobat</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through bullets
+(tagged as label). Arrow key navigation required to access list body.<o:p></o:p></p>
+
+<h3>JAWS + Firefox</h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list
+items, focusing bullet and text at the same time. List items are announced as “Bullet
+[body text] graphic”.<o:p></o:p></p>
+
+<h3>JAWS + Chrome<o:p></o:p></h3>
+
+<p class=MsoNormal>Did not announce list. On L/I shortcuts, announces no lists
+or list items.<o:p></o:p></p>
+
+<p class=MsoNormal>List items (including bullet and text) can be focused with
+arrow keys and are announced as “Bullet [body text]”.<o:p></o:p></p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<h2>Test 4: Manually replaced one list item in fully remade list tag structure</h2>
+
+<p class=MsoNormal>Using the manually created list markup, deleted a single
+list item tag, and recreated the tag structure using “Create tag from content”
+and “New tag” tools.</p>
+
+<h3>NVDA + Acrobat</h3>
+
+<p class=MsoNormal>The recreated list item was ignored by NVDA. The list was
+announced as 3 items rather than 4.</p>
+
+<h3>NVDA + Firefox</h3>
+
+<p class=MsoNormal>List announced including number of items. List navigation
+and shortcuts functioned as expected.<o:p></o:p></p>
+
+<h3>JAWS + Acrobat</h3>
+
+<p class=MsoNormal>Announced list with 3 items. On “I” moves through first two
+bullets, then to the text “Chocolate”, then loops to the top of the list.<o:p></o:p></p>
+
+<h3>JAWS + Firefox<o:p></o:p></h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list
+items, focusing bullet and text at the same time. List items are announced as “Bullet
+[body text] graphic”.<o:p></o:p></p>
+
+<h2>Test 5: Manually replaced full list in existing tag tree</h2>
+
+<p class=MsoNormal>Deleted the functioning list markup, but not the tag tree
+itself. Recreated the list structure from scratch using “Create tag from
+content” and “New tag” tools.</p>
+
+<h3>NVDA + Acrobat</h3>
+
+<p class=MsoNormal>List was not announced. List content was not accessible by
+the screen reader.</p>
+
+<h3>NVDA + Firefox</h3>
+
+<p class=MsoNormal>List announced with 4 items. List navigation and shortcuts
+functioned as expected.<o:p></o:p></p>
+
+<h3>JAWS + Acrobat</h3>
+
+<p class=MsoNormal>List was not announced. List content was not accessible by
+the screen reader.</p>
+
+<h3>JAWS + Firefox<o:p></o:p></h3>
+
+<p class=MsoNormal>Announced list with 4 items. On “I” moves through list
+items, focusing bullet and text at the same time. List items are announced as “Bullet
+[body text] graphic”.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Findings</h2>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Lists in PDFs are not supported by Chrome.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Firefox is the only user agent which announced
+the intended list markup across all tests.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>JAWS does not seem to have a great relationship
+with the Label element. On Acrobat it is assumed to be the link element.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>In cases where list item tags are deleted and
+re-created, Acrobat will not announce those list items to screen readers. This
+creates unpredictable behaviour in JAWS and NVDA. I have investigated the
+content tree and tag properties for the newly created tag. I cannot find any
+differences between the two constructions. Therefore, I’m calling this an Acrobat
+bug.</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The bug identified in item 4 does not occur when
+the tag tree is deleted, and new tags are created from content.</p>
+
+<h2>Speculation</h2>
+
+<p class=MsoNormal>The “Graphic” announcement of JAWS on Firefox may be
+recognising the bullets. This would be consistent with JAWS not recognising label
+tags on Acrobat.</p>
+
+<h2>Further testing</h2>
+
+<p class=MsoNormal>Most importantly, tests should be done to determine which if
+any other elements are affected by the delete + retag bug on Acrobat. I have
+tested the same process with a heading element, and the bug was not reproduced.</p>
+
+<p class=MsoNormal>Tests should be done to determine behaviour when elements
+are incorrectly tagged at initial markup, then retagged as list items later. For
+example, if an item is initially tagged as a &lt;P&gt; then retagged as a list
+item, does the Acrobat bug apply?</p>
+
+<p class=MsoNormal>Test should be done to determine if the Acrobat bug occurs when
+new content is added via the edit tool, then manually tagged. If the explanation
+of the results above is correct, this content should be announced as it has not
+previously been tagged. However, this has not been tested and the results may
+be unexpected.</p>
+
+<p class=MsoNormal>I would like to know how screen readers react to tagging
+bullets as artefacts rather than labels. This may improve quality of content
+flow on <span class=GramE>JAWS, but</span> may also break the list flow.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
